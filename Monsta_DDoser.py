@@ -150,8 +150,4 @@ else:
 			url = url + "/"
 		m = re.search('http\://([^/]*)/?.*', url)
 		host = url
-		for i in range(500):
-			t = HTTPThread()
-			t.start()
-		t = MonitorThread()
-		t.start()
+		lanzar(host)
